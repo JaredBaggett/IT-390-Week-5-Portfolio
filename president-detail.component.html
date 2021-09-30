@@ -1,0 +1,10 @@
+<div *ngIf="president">
+  <h2>{{president.name | uppercase}} Details</h2>
+  <div><span>id: </span>{{president.id}}</div>
+  <div>
+    <label for="president-name">president name: </label>
+    <input id="president-name" [(ngModel)]="president.name" placeholder="President name"/>
+  </div>
+  <button (click)="goBack()">go back</button>
+  <button (click)="save()">save</button>
+</div>

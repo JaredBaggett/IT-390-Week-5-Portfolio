@@ -1,0 +1,23 @@
+<!--<h2>{{president}}</h2> -->
+<h2>United States Presidents</h2>
+
+<div>
+  <label for="new-president">President name: </label>
+  <input id="new-president" #presidentName />
+
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button class="add-button" (click)="add(presidentName.value); presidentName.value=''">
+    Add president
+  </button>
+</div>
+
+<ul class="presidents">
+  <li *ngFor="let president of presidents">
+    <a routerLink="/detail/{{president.id}}">
+      <span class="badge">{{president.id}}</span> {{president.name}}
+    </a>
+    <button class="delete" title="delete president"
+      (click)="delete(president)">x</button>
+  </li>
+</ul>
+<!--<app-president-detail [president]="selectedPresident"></app-president-detail> -->

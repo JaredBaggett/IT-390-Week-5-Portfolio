@@ -1,0 +1,8 @@
+<h2>Top Heroes</h2>
+<div class="presidents-menu">
+  <a *ngFor="let president of presidents"
+    routerLink="/detail/{{president.id}}">
+    {{president.name}}
+  </a>
+</div>
+<app-president-search></app-president-search>
